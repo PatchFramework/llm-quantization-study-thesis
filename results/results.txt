@@ -1,0 +1,55 @@
+common tasks:
+hellaswag,arc_easy,arc_challenge,xwinograd_en,piqa,openbookqa,boolq
+and perplexity on the datasets wikitext2 and C4
+
+
+BitMat AbsMean Ternary Mistral v0.3 (non instruct, zero-shot) full precision tokenizer  
+2024-08-23:09:58:22,197 INFO     [evaluation_tracker.py:269] Output path not provided, skipping saving results aggregated
+bitmat (pretrained=absmean-ternary-bitmat,tokenizer=mistralai/Mistral-7B-v0.3,trust_remote_code=True), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: auto (32)
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2235|±  |0.0122|
+|             |       |none  |     0|acc_norm|↑  |0.2901|±  |0.0133|
+|arc_easy     |      1|none  |     0|acc     |↑  |0.2630|±  |0.0090|
+|             |       |none  |     0|acc_norm|↑  |0.2534|±  |0.0089|
+|boolq        |      2|none  |     0|acc     |↑  |0.5131|±  |0.0087|
+|openbookqa   |      1|none  |     0|acc     |↑  |0.1560|±  |0.0162|
+|             |       |none  |     0|acc_norm|↑  |0.2280|±  |0.0188|
+|piqa         |      1|none  |     0|acc     |↑  |0.5245|±  |0.0117|
+|             |       |none  |     0|acc_norm|↑  |0.5016|±  |0.0117|
+|xwinograd_en |      1|none  |     0|acc     |↑  |0.4963|±  |0.0104|
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.2557|±  |0.0044|
+|         |       |none  |     0|acc_norm|↑  |0.2599|±  |0.0044|
+
+
+Non-Quantized Mistral v0.3 BF16
+2024-08-23:12:04:35,258 INFO     [evaluation_tracker.py:269] Output path not provided, skipping saving results aggregated
+hf (pretrained=mistralai/Mistral-7B-v0.3,tokenizer=mistralai/Mistral-7B-v0.3,trust_remote_code=True), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: auto (32)
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.4889|±  |0.0146|
+|             |       |none  |     0|acc_norm|↑  |0.5213|±  |0.0146|
+|arc_easy     |      1|none  |     0|acc     |↑  |0.7971|±  |0.0083|
+|             |       |none  |     0|acc_norm|↑  |0.7824|±  |0.0085|
+|boolq        |      2|none  |     0|acc     |↑  |0.8208|±  |0.0067|
+|hellaswag    |      1|none  |     0|acc     |↑  |0.6086|±  |0.0049|
+|             |       |none  |     0|acc_norm|↑  |0.8035|±  |0.0040|
+|openbookqa   |      1|none  |     0|acc     |↑  |0.3340|±  |0.0211|
+|             |       |none  |     0|acc_norm|↑  |0.4420|±  |0.0222|
+|piqa         |      1|none  |     0|acc     |↑  |0.8030|±  |0.0093|
+|             |       |none  |     0|acc_norm|↑  |0.8205|±  |0.0090|
+|xwinograd_en |      1|none  |     0|acc     |↑  |0.8865|±  |0.0066|
+
+
+
+
+RTN Llama 2
+
+2024-12-06:09:48:42,727 INFO     [evaluation_tracker.py:269] Output path not provided, skipping saving results aggregated
+bitmat (pretrained=quantized/llama-2-7b-absmean-ternary-bitmat,tokenizer=mistralai/Mistral-7B-v0.3), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: auto (64)
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.2528|±  |0.0043|
+|         |       |none  |     0|acc_norm|↑  |0.2578|±  |0.0044|
